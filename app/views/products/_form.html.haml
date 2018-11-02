@@ -1,0 +1,12 @@
+= form_for @product do |f|
+  = f.label :name
+  = f.text_field :name
+
+  = f.label :comissionable
+  = f.check_box :comissionable
+
+  = f.fields_for(:walk) do |e|
+    = e.label :list_group
+    = e.text_field :list_group
+
+  = f.submit "Save"
